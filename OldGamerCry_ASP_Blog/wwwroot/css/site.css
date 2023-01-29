@@ -1,0 +1,74 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+.background {
+    background-image: url("../img/Logo3.png");
+    height: 400px;
+    background-color: red;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.article_main {
+    height: 550px;
+    border: 1px solid rgb(196, 192, 192);
+    box-shadow: 4px 4px 10px;
+    border-radius: 10px;
+    background-color: rgb(249, 246, 246);
+    transition: 0.5s;
+}
+
+    .article_main h2, .article_main p {
+        color: black;
+    }
+
+
+.article {
+    height: 250px;
+    border: 1px solid rgb(196, 192, 192);
+    box-shadow: 4px 4px 10px;
+    border-radius: 10px;
+    background-color: rgb(249, 246, 246);
+    transition: 0.5s;
+}
+
+    .article h2, .article p {
+        color: black;
+    }
+
+    .article:hover,
+    .article_main:hover {
+        background: rgb(240, 237, 237);
+        border: 1px solid rgb(136, 134, 134);
+        box-shadow: 6px 6px 15px;
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    .article img {
+        max-height: 100px;
+    }
+
+.article_main img {
+    max-height: 220px;
+}
+
