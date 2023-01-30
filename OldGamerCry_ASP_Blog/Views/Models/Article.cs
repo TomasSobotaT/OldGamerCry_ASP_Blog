@@ -22,7 +22,7 @@ namespace pokusoblog2.Models
         public void SaveImageAndMapPath() 
         {
             File.WriteAllBytes(@$"wwwroot\images\{Title}.jpg", ImageByte);
-            ImagePath = @$"wwwroot\images\{Title}.jpg";
+            ImagePath = @$"images\{Title}.jpg";
         }
 
 

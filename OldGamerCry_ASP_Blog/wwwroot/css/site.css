@@ -1,5 +1,8 @@
 html {
   font-size: 14px;
+  padding: 0;
+  margin:0;
+  box-sizing:content-box;
 }
 
 @media (min-width: 768px) {
@@ -9,13 +12,23 @@ html {
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+/*====================================Login=====================================*/
+
+.register, .register nav {
+    background-color: rgba(88,143,39,255);
+}
+
+
+/*====================================Main site=====================================*/
+
 
 
 .background {
