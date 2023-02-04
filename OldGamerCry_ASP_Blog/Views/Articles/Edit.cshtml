@@ -1,42 +1,34 @@
 ﻿@model pokusoblog2.Models.Article
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit article";
 }
 
-<h1>Edit</h1>
 
-<h4>Article</h4>
+<h1 class="text-center">Edit article</h1>
+
+
 <hr />
+<div class="container"> 
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-12">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Title" class="control-label"></label>
+                <div class="form-group mb-3">
+                <label asp-for="Title" class="control-label mb-1 fw-bold"></label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label mb-1 fw-bold"></label>
+                <input asp-for="Description" class="form-control"  />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Contain" class="control-label"></label>
-                <input asp-for="Contain" class="form-control" />
-                <span asp-validation-for="Contain" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedDate" class="control-label"></label>
-                <input asp-for="CreatedDate" class="form-control" />
-                <span asp-validation-for="CreatedDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ImagePath" class="control-label"></label>
-                <input asp-for="ImagePath" class="form-control" />
-                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            <div class="form-group mb-3">
+                    <label asp-for="Content" class="control-label mb-1 fw-bold"></label>
+                    <textarea asp-for="Content" class="form-control">   </textarea>
+                    <span asp-validation-for="Content"  class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
@@ -44,11 +36,16 @@
         </form>
     </div>
 </div>
+</div>
 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
 
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+  
 }
+
+   

@@ -54,7 +54,7 @@ namespace OldGamerCry_ASP_Blog.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,Description,Contain")] Article article, [FromForm] IFormFile file)
+        public async Task<IActionResult> Create([Bind("Id,Title,Description,Content")] Article article, [FromForm] IFormFile file)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace OldGamerCry_ASP_Blog.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Contain,CreatedDate,ImagePath")] Article article)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Content")] Article article)
         {
             if (id != article.Id)
             {

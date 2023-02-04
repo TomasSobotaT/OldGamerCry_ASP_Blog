@@ -17,6 +17,7 @@ html {
 }
 
 body {
+ 
     margin-bottom: 60px;
 }
 
@@ -61,7 +62,7 @@ body {
     box-shadow: 4px 4px 10px;
     border-radius: 10px;
     background-color: rgb(249, 246, 246);
-    transition: 0.5s;
+    transition: 5s;
 }
 
     .article h2, .article p {
@@ -83,5 +84,11 @@ body {
 
 .article_main img {
     max-height: 220px;
+   
 }
 
+/*====================================Edit=====================================*/
+
+#Content {
+height:800px;
+}

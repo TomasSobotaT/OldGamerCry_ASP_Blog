@@ -1,48 +1,47 @@
 ﻿@model pokusoblog2.Models.Article
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = @Model.Title;
 }
 
-<h1>Details</h1>
 
-<div>
-    <h4>Article</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Contain)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Contain)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImagePath)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImagePath)
-        </dd>
-    </dl>
+@*BACKGROUND*@
+<div class="mb-5">
+    <div class="background img-fluid"></div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+
+
+<div class="container">
+    <div class="row">
+
+        <div>  
+            <div>
+                <h1>@Model.Title</h1>
+            </div>
+            <div>
+                <h6 class="">@Model.Description</h6>
+            </div>
+
+        </div>
+       
+
+        <div>
+           
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2 fw-normal">
+                        @*to be showed without html and formating*@    
+                        @Html.Raw(Model.Content)
+                </dt>
+
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+
+    </div>
 </div>
+
