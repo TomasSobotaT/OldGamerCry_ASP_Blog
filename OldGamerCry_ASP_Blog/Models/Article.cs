@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using OldGamerCry_ASP_Blog.Data;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace pokusoblog2.Models
 {
     public class Article
     {
+       
         public int Id { get; set; }
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
@@ -17,12 +19,12 @@ namespace pokusoblog2.Models
        
 
         /// <summary>
-        /// save image from byte[] to *.jpg and save path
+        /// save image from byte[] to *.jpg, save to it images folder and save path 
         /// </summary>
         public void SaveImageAndMapPath() 
         {
             File.WriteAllBytes(@$"wwwroot\images\{Title}.jpg", ImageByte);
-            ImagePath = @$"images\{Title}.jpg";
+            ImagePath = @$"images\{Title}-{CreatedDate}.jpg";
         }
 
 
