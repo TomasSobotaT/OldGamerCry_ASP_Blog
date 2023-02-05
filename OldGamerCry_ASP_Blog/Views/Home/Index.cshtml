@@ -14,13 +14,16 @@
 <section>
 	<div class="container">
 		<div class="row">
+			@{
+			int	ArticlesCount = Model.Count()-1;
+			}
 
-			@for (int i = 0; i < Model.Count(); i++)
+			@for (int i = ArticlesCount; i >= 0; i--)
 			{
 @*				string currentDirectoryImage = System.IO.Path.Combine(Directory.GetCurrentDirectory(), Model[i].ImagePath);
 *@				
 				//last added article
-				if (i == 0)
+				if (i == ArticlesCount)
 				{
 					<div class="col-lg-6">
 							<a asp-controller="Articles" asp-action="Details" asp-route-id="@Model[i].Id" class="text-decoration-none link-light">
@@ -38,15 +41,15 @@
 				}
 
 				//four articles on right side
-				if (i == 1)
+				if (i == (ArticlesCount-1))
 				{
 					<div class="col-lg-6 d-flex flex-wrap col-12">
-						@for (; i < 5; i++)
+						@for (; i > (ArticlesCount-5); i--)
 						{
 							<div class="col-lg-6 col-12">
 									<a asp-controller="Articles" asp-action="Details" asp-route-id="@Model[i].Id"  class="text-decoration-none link-light">
 								<div class="article d-flex justify-content-center align-items-center mx-lg-1 me-lg-3 my-4 flex-column text-dark">
-										<img src="~/@Model[i].ImagePath" alt="@Model[i].Title class="img-fluid">
+										<img src="~/@Model[i].ImagePath" alt="@Model[i].Title" class="img-fluid">
 										<div class="col-11 offset-1 pt-2">
 											<h5>@Model[i].Title</h5>
 											<p>@Model[i].Description</p>
@@ -61,12 +64,12 @@
 				}
 
 				//other articles
-				if (i > 4)
+				if (i < (ArticlesCount-4))
 				{
 					<div class="col-lg-3">
 							<a asp-controller="Articles" asp-action="Details" asp-route-id="@Model[i].Id" class="text-decoration-none link-light">
 						<div class="article d-flex justify-content-center align-items-center mx-lg-1 my-4 flex-column text-dark">
-								<img  src="~/@Model[i].ImagePath" alt="@Model[i].Title class="img-fluid">
+								<img  src="~/@Model[i].ImagePath" alt="@Model[i].Title" class="img-fluid">
 								<div class="col-11 offset-1 pt-2">
 									<h5>@Model[i].Title</h5>
 									<p>@Model[i].Description</p>

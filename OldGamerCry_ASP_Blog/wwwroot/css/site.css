@@ -20,6 +20,11 @@ body {
  
     margin-bottom: 60px;
 }
+/*====================================footer=====================================*/
+footer {
+    background-color: rgba(88,143,39,255);
+}
+
 
 /*====================================Login=====================================*/
 
@@ -36,7 +41,7 @@ body {
     background-image: url("../img/Logo3.png");
     height: 400px;
     background-color: red;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -87,8 +92,4 @@ body {
    
 }
 
-/*====================================Edit=====================================*/
 
-#Content {
-height:800px;
-}

@@ -99,17 +99,28 @@ namespace OldGamerCry_ASP_Blog.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Content")] Article article)
         {
+            
             if (id != article.Id)
             {
                 return NotFound();
-            }
-
+            }      
+          
             if (ModelState.IsValid)
-            {
+            {            
                 try
                 {
-                    _context.Update(article);
+                    //only Title, Describtion and Context will be updated
+                    var existingArticle = await _context.Article.FindAsync(id);
+                    if (existingArticle == null)
+                    {
+                        return NotFound();
+                    }
+                    existingArticle.Title = article.Title;
+                    existingArticle.Description = article.Description;
+                    existingArticle.Content = article.Content;
+                    _context.Update(existingArticle);
                     await _context.SaveChangesAsync();
+
                 }
                 catch (DbUpdateConcurrencyException)
                 {

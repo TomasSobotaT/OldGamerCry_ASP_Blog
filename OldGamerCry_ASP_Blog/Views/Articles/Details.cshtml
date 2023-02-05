@@ -27,14 +27,14 @@
 
         <div>
            
-            <hr />
-            <dl class="row">
-                <dt class="col-sm-2 fw-normal">
+            <hr/>
+            <div class="row">
+                <dt class="col-12 fw-normal">
                         @*to be showed without html and formating*@    
                         @Html.Raw(Model.Content)
                 </dt>
 
-            </dl>
+            </div>
         </div>
         <div>
             <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |

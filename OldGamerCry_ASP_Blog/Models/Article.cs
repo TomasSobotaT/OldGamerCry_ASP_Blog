@@ -12,7 +12,7 @@ namespace pokusoblog2.Models
         public string Content{ get; set; } = "";
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         [NotMapped]
-        public byte[] ImageByte { get; set; } = {1,2,3 };
+        public byte[] ImageByte { get; set; } = { 1, 2, 3 };
         
         public string ImagePath { get; set; } = "";
 
@@ -23,8 +23,8 @@ namespace pokusoblog2.Models
         /// </summary>
         public void SaveImageAndMapPath() 
         {
-            File.WriteAllBytes(@$"wwwroot\images\{Title}.jpg", ImageByte);
-            ImagePath = @$"images\{Title}-{CreatedDate}.jpg";
+            File.WriteAllBytes(@$"wwwroot\images\{Title}-{CreatedDate.ToString("yyyy.MM.dd")}.jpg", ImageByte);
+            ImagePath = @$"images\{Title}-{CreatedDate.ToString("yyyy.MM.dd")}.jpg";
         }
 
 
