@@ -2,14 +2,10 @@ html {
   font-size: 14px;
   padding: 0;
   margin:0;
-  box-sizing:content-box;
+  box-sizing:border-box;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+
 
 html {
     position: relative;
@@ -26,11 +22,25 @@ footer {
 }
 
 
-/*====================================Login=====================================*/
+/*====================================navigation=====================================*/
+
+nav {
+    border-bottom:5px solid white;
+}
 
 .register, .register nav {
     background-color: rgba(88,143,39,255);
 }
+
+.nav-item {
+    filter:brightness(95%);
+
+}
+.nav-item:hover {
+    filter: brightness(130%);
+    transform:scale(110%);
+}
+
 
 
 /*====================================Main site=====================================*/
@@ -40,7 +50,7 @@ footer {
 .background {
     background-image: url("../img/Logo3.png");
     height: 400px;
-    background-color: red;
+   
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -93,3 +103,8 @@ footer {
 }
 
 
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}

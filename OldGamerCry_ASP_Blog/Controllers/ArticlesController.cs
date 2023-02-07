@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -56,10 +57,17 @@ namespace OldGamerCry_ASP_Blog.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Description,Content")] Article article, [FromForm] IFormFile file)
         {
+            // if image file is not loaded, remove from Modelstate
+            if (file == null)
+            {
+                ModelState.Remove("file");
+            }
+            
+
             if (ModelState.IsValid)
             {
                 if (file != null)
-                {
+                {   // if image is loaded, it will be converted
                     using (var binaryReader = new BinaryReader(file.OpenReadStream()))
                     {
                         article.ImageByte = binaryReader.ReadBytes((int)file.Length);
@@ -75,7 +83,7 @@ namespace OldGamerCry_ASP_Blog.Controllers
             }
             return View(article);
         }
-
+     
         // GET: Articles/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {

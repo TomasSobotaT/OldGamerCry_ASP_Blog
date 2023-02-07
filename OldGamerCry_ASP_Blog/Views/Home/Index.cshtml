@@ -46,6 +46,8 @@
 					<div class="col-lg-6 d-flex flex-wrap col-12">
 						@for (; i > (ArticlesCount-5); i--)
 						{
+							if(i>=0)
+							{
 							<div class="col-lg-6 col-12">
 									<a asp-controller="Articles" asp-action="Details" asp-route-id="@Model[i].Id"  class="text-decoration-none link-light">
 								<div class="article d-flex justify-content-center align-items-center mx-lg-1 me-lg-3 my-4 flex-column text-dark">
@@ -58,13 +60,13 @@
 								</div>
 									</a>
 							</div>
-							
+							}
 						}
 					</div>
 				}
 
 				//other articles
-				if (i < (ArticlesCount-4))
+				if (i < (ArticlesCount-4) && i>=0)
 				{
 					<div class="col-lg-3">
 							<a asp-controller="Articles" asp-action="Details" asp-route-id="@Model[i].Id" class="text-decoration-none link-light">
