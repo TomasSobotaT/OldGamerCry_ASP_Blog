@@ -13,9 +13,9 @@
     <a asp-action="Create" class="btn btn-lg btn-success">Create New</a>
 </p>
 <table class="table table-responsive table-striped">
-    <thead class="text-center h5">
+    <thead class="h5">
         <tr>
-            <th>
+            <th >
                 @Html.DisplayNameFor(model => model.Title)
             </th>
             <th>
@@ -27,7 +27,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.CreatedDate)
             </th>
-            <th>
+            <th class="text-center">
                 <span>Title image</span>
             </th>
             <th></th>

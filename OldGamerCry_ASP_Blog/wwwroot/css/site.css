@@ -48,14 +48,20 @@ nav {
 
 
 .background {
-    background-image: url("../img/Logo3.png");
+    background-image: url("../img/Logo1.png");
     height: 400px;
-   
+    background-color: rgba(88,143,39,255);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
-
+.background2 {
+    background-image: url("../img/Logo1.png");
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
 
 .article_main {
     height: 550px;
@@ -106,5 +112,20 @@ nav {
 @media (min-width: 768px) {
     html {
         font-size: 16px;
+    }
+    .background {
+        background-image: url("../img/Logo3.png");
+        height: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .background2 {
+        background-image: url("../img/Logo2.png");
+        height: 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
     }
 }

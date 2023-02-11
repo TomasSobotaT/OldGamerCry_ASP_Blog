@@ -1,4 +1,5 @@
 ﻿using OldGamerCry_ASP_Blog.Data;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace pokusoblog2.Models
@@ -7,9 +8,17 @@ namespace pokusoblog2.Models
     {
        
         public int Id { get; set; }
+
+        [Display(Name ="Title")]
         public string Title { get; set; } = "";
+
+        [Display(Name = "Description")]
         public string Description { get; set; } = "";
+
+        [Display(Name = "Content")]
         public string Content{ get; set; } = "";
+
+        [Display(Name = "Published")]
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         [NotMapped]
         public byte[] ImageByte { get; set; } = { 1, 2, 3 };

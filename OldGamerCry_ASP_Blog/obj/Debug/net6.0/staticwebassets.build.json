@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6pXpQPlAt/AqJv8oBTDa69bK9TbMATaUzexGa8x+Vvs=",
+  "Hash": "0YyhsQ5ZHoIebdtjDLYzIY9+xfb1clfA5gl3RExtd8s=",
   "Source": "OldGamerCry_ASP_Blog",
   "BasePath": "_content/OldGamerCry_ASP_Blog",
   "Mode": "Default",
@@ -270,6 +270,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\x-2023.02.05.jpg"
+    },
+    {
+      "Identity": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\img\\Logo1.png",
+      "SourceId": "OldGamerCry_ASP_Blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\",
+      "BasePath": "_content/OldGamerCry_ASP_Blog",
+      "RelativePath": "img/Logo1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logo1.png"
+    },
+    {
+      "Identity": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\img\\Logo2.png",
+      "SourceId": "OldGamerCry_ASP_Blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\",
+      "BasePath": "_content/OldGamerCry_ASP_Blog",
+      "RelativePath": "img/Logo2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Logo2.png"
     },
     {
       "Identity": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\img\\Logo3.png",
