@@ -87,7 +87,7 @@ namespace OldGamerCry_ASP_Blog.Controllers
 
                 try
                 {
-                    mailManager.SendEmails(article.Title, article.Description);
+                    mailManager.SendEmails(article.Title, article.Description, article.Id);
                 }
                 catch(Exception ex)
                 {
