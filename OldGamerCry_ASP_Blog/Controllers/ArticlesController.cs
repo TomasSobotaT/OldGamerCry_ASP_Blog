@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using OldGamerCry_ASP_Blog.Data;
+using OldGamerCry_ASP_Blog.Models;
 using pokusoblog2.Models;
 
 namespace OldGamerCry_ASP_Blog.Controllers
@@ -79,6 +81,19 @@ namespace OldGamerCry_ASP_Blog.Controllers
 
                 _context.Add(article);
                 await _context.SaveChangesAsync();
+
+                //info email will be send to registered users  after save the new article
+                MailManager mailManager = new MailManager(_context);
+
+                try
+                {
+                    mailManager.SendEmails(article.Title, article.Description);
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception("Article has been saved but there was an error within sending information emails. Error:");
+                }
+
                 return RedirectToAction(nameof(Index));
             }
             return View(article);

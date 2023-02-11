@@ -5,7 +5,7 @@ namespace OldGamerCry_ASP_Blog.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "UserName/Email")]
         [EmailAddress(ErrorMessage = "Invalid email address")]
         public string Email { get; set; } = "";
 

@@ -1,0 +1,19 @@
+﻿
+.button_register {
+    text-decoration:none;
+}
+
+.button_register:hover {
+    text-decoration: underline;
+}
+
+.input_mail:focus {
+    box-shadow: none;
+    border: 1px solid rgba(88,143,39,255);
+    outline: 3px solid rgba(88,143,39,255);
+}
+
+#aaaa:checked {
+    background-color: rgba(88,143,39,255) !important;
+  
+}

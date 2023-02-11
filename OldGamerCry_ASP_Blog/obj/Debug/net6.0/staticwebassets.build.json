@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0YyhsQ5ZHoIebdtjDLYzIY9+xfb1clfA5gl3RExtd8s=",
+  "Hash": "n8m+62mdtR00QKOyuDmegWPJ9/9gpvKhkEbk7QviWlE=",
   "Source": "OldGamerCry_ASP_Blog",
   "BasePath": "_content/OldGamerCry_ASP_Blog",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\edit.css"
+    },
+    {
+      "Identity": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\css\\login.css",
+      "SourceId": "OldGamerCry_ASP_Blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\",
+      "BasePath": "_content/OldGamerCry_ASP_Blog",
+      "RelativePath": "css/login.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\login.css"
     },
     {
       "Identity": "C:\\GitHubZaloha\\OldGamerCry_ASP_Blog\\OldGamerCry_ASP_Blog\\wwwroot\\css\\site.css",

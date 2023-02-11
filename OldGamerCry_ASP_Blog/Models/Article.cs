@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace pokusoblog2.Models
 {
+    /// <summary>
+    /// Class represents article and its parts
+    /// </summary>
     public class Article
     {
        
