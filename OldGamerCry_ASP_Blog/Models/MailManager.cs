@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OldGamerCry_ASP_Blog.Data;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -11,7 +12,7 @@ namespace OldGamerCry_ASP_Blog.Models
 /// </summary>
     [NotMapped]
     
-    public class MailManager : Controller
+    public class MailManager 
     {
         private readonly ApplicationDbContext _context;
     
@@ -19,6 +20,11 @@ namespace OldGamerCry_ASP_Blog.Models
         public MailManager(ApplicationDbContext context) 
         {
             _context = context;
+        }
+
+        public Task SendEmailAsync(string email, string subject, string htmlMessage)
+        {
+            throw new NotImplementedException();
         }
 
 
@@ -29,6 +35,8 @@ namespace OldGamerCry_ASP_Blog.Models
         /// </summary>
         /// <param name="title">title of article</param>
         /// <param name="description">description of article</param>
+        /// <param name="id">id of article</param>
+
         public void SendEmails(string title, string description,int id)
         {
             var users = _context.Users.ToList();
@@ -80,4 +88,5 @@ namespace OldGamerCry_ASP_Blog.Models
 
 
     }
+   
 }

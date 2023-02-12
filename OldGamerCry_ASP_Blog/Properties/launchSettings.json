@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:10927",
+      "applicationUrl": "http://oldgamercry.aspifyhost.cz",
       "sslPort": 44315
     }
   },

@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,6 +14,9 @@ using pokusoblog2.Models;
 
 namespace OldGamerCry_ASP_Blog.Controllers
 {
+
+    //only role "administrator" is allowed use this controller, allowed actions are marked: [AllowAnonymous]
+    [Authorize(Roles = "administrator")]
     public class ArticlesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -23,12 +27,14 @@ namespace OldGamerCry_ASP_Blog.Controllers
         }
 
         // GET: Articles
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
               return View(await _context.Article.ToListAsync());
         }
 
         // GET: Articles/Details/5
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Article == null)

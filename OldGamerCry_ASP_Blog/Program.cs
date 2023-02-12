@@ -26,6 +26,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+ 
 }
 else
 {
@@ -49,4 +50,18 @@ app.MapControllerRoute(
 //does not work with builder.Services.AddIdentity() 
 //app.MapRazorPages();
 
+//add role admin to entered email, to create specific role, uncomment code and compile
+//using (var scope = app.Services.CreateScope())
+//{
+//    RoleManager<IdentityRole> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+//    UserManager<IdentityUser> userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+
+//    await roleManager.CreateAsync(new IdentityRole("administrator"));
+//    IdentityUser user = await userManager.FindByEmailAsync("b@b.cz");
+//    await userManager.AddToRoleAsync(user, "administrator");
+//}
+
 app.Run();
+
+
+

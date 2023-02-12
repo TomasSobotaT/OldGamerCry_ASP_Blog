@@ -108,6 +108,9 @@ nav {
    
 }
 
+.separator {
+    height: 50px;
+}
 
 @media (min-width: 768px) {
     html {
@@ -127,5 +130,9 @@ nav {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    .separator {
+        height:100px;
     }
 }
