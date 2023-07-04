@@ -7,7 +7,7 @@ Adding articles directly on the site using the WYSIWYG editor Summernote.<br>
 Articles are listed on the front page in order of newest to oldest.<br>
 Articles and user data are stored in the database using the Entity Framework (in the project is used
 Code-first). <br>
-Test articles are copied from wikipedia <br>
+Test articles are copied from wikipedia. <br>
 
 WWW: <a href="http://oldgamercry.aspifyhost.cz/">oldgamercry.aspifyhost.cz<a><br>
 Documentation (CZ): <a href="https://tsobota.cz/ASP_Oldgamercry.html">tsobota.cz/ASP_Oldgamercry.html<a>
